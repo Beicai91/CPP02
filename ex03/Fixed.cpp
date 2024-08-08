@@ -3,16 +3,14 @@
 const int Fixed::_fracBits = 8;
 
 //constructors
-Fixed::Fixed()
+Fixed::Fixed(): _value(0)
 {
-    this->_value = 0;
     //std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &other)
+Fixed::Fixed(const Fixed &other): _value(other._value)
 {
     //std::cout << "Copy constructor called" << std::endl;
-    this->_value = other._value;
 }
 
 Fixed::Fixed(const int num)
