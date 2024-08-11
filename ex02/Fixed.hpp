@@ -27,7 +27,6 @@ class   Fixed
         static  Fixed   &max(Fixed &num1, Fixed &num2);
         static const Fixed   &max(const Fixed &num1, const Fixed &num2); 
 
-        friend std::ostream &operator<<(std::ostream &os, const Fixed &fpNum);
 
         bool    operator<(const Fixed &other) const;
         bool    operator>(const Fixed &other) const;
@@ -46,5 +45,7 @@ class   Fixed
         Fixed   &operator--();
         Fixed   operator--(int);
 };
+
+std::ostream &operator<<(std::ostream &os, const Fixed &fpNum);
 
 #endif
