@@ -11,12 +11,12 @@ class Point
         const Fixed _y;
 
         static float   _getRatio(const Point &a, const Point &b);
+        Point   &operator=(const Point &other); //no sense to implement copy assignment operator as all attributes are const. Put it in private prevents users from accessing it
     
     public:
         Point();
         Point(const float num1, const float num2);
         Point(const Point &other);
-        Point   &operator=(const Point &other);
         ~Point();
         const Fixed &getX() const;
         const Fixed &getY() const;
