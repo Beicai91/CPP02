@@ -14,13 +14,14 @@ Point::~Point()
 {}
 
 //operator overload
+/*
 Point   &Point::operator=(const Point &other)
 {
     if (this == &other) // this is a pointer, == checks if they point to the same address
         return (*this);
     //copy other non-const member var
     return (*this);
-}
+}*/
 
 //private member funcs
 float   Point::_getRatio(const Point &a, const Point &b)
